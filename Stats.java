@@ -17,7 +17,8 @@ public class Stats {
 		// System.out.println(findMax(a));
 		// System.out.println(findMin(a));
 		// System.out.println(findMean(a));
-		System.out.println(findMedian(a));
+		// System.out.println(findMedian(a));
+		System.out.println(findQ1(a));
 	}
 
 
@@ -67,4 +68,12 @@ public class Stats {
 		
 	}
 	
+	public static double findQ1(int[]a) {
+		double med= findMedian(a);
+		double min= findMin(a);
+		double difference = med.length - min.length;
+		double quartile = 0.0;
+		quartile = (med + min) / difference;
+		return quartile;	
+	}
 }
