@@ -8,17 +8,16 @@ public class Stats {
 		//Q1
 		//Q3
 		//Median
-	
-	//mode
+		//mode
 		//standard deviation
 
 
-		int[] a = { -7,-3,2,4};
+		int[] a = {1,2,3,4,5,6,7,8};
 
 		// System.out.println(findMax(a));
 		// System.out.println(findMin(a));
 		// System.out.println(findMean(a));
-		// System.out.println(findMedian(a));
+		System.out.println(findMedian(a));
 	}
 
 
@@ -54,10 +53,18 @@ public class Stats {
 		return mean;
 	}
 
-	// public static double findMedian(int[] a) {
-	// 	double median=0;
-		
+	// 1,2,3,4
 
-	// }
+	public static double findMedian(int[] a) {
+		double median = 0;
+		int mid = a.length/2;
+		if (a.length % 2 ==0) {
+			median = (a[mid-1] + a[mid]) / 2.0;
+		} else {
+			median = a[mid];
+		}
+		return median;
+		
+	}
 	
 }
