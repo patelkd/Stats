@@ -7,12 +7,11 @@ public class Stats {
 		//Median
 		//Q1
 		//Q3
-		//Median
 		//mode
 		//standard deviation
 
 
-		int[] a = {1,3,3,4,5,6,6,7,8,8};
+		int[] a = {1,3,3,4,5,6,6,6,8,8};
 
 		// System.out.println(findMax(a));
 		// System.out.println(findMin(a));
@@ -20,6 +19,7 @@ public class Stats {
 		// System.out.println(findMedian(a));
 		// System.out.println(findQ1(a));
 		// System.out.println(findQ3(a));
+		System.out.println(findMode(a));
 
 	}
 
@@ -95,6 +95,25 @@ public class Stats {
 			number = a[placement];
 		} else {
 			number = sum/2;
+		}
+		return number;
+	}
+
+	public static int findMode(int[] a) {
+		int temporary, counter, number;
+		counter=0;
+		number=0;
+		for (int i=0; i<a.length; i++) {
+			temporary=0;
+			for (int k=0; k<a.length; k++) {
+				if(a[i]==a[k]) {
+					temporary++;
+					if(counter<temporary) {
+						counter=temporary;
+						number=a[i];
+					}
+				}
+			}
 		}
 		return number;
 	}
