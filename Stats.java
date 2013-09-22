@@ -11,7 +11,7 @@ public class Stats {
 		//standard deviation
 
 
-		int[] a = {1,3,3,4,5,6,6,6,8,8};
+		int[] a = {53,61,49,67,55,63};
 
 		// System.out.println(findMax(a));
 		// System.out.println(findMin(a));
@@ -19,7 +19,8 @@ public class Stats {
 		// System.out.println(findMedian(a));
 		// System.out.println(findQ1(a));
 		// System.out.println(findQ3(a));
-		System.out.println(findMode(a));
+		// System.out.println(findMode(a));
+		System.out.println(findStandardDeviation(a));
 
 	}
 
@@ -116,5 +117,19 @@ public class Stats {
 			}
 		}
 		return number;
+	}
+
+	public static double findStandardDeviation(int[] a) {
+		double mean = findMean(a);
+		double sum = 0;
+		double variance =0;
+		for (int i=0; i<a.length; i++) {
+			double diff = mean - a[i];
+			double square = diff * diff;
+			sum += square;
+		}
+		variance = sum/a.length;
+		double sd = Math.sqrt(variance);
+		return sd;
 	}
 }
