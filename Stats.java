@@ -12,7 +12,7 @@ public class Stats {
 		//standard deviation
 
 
-		int[] a = {1,2,3,4,5,6,7,8};
+		int[] a = {3,4,4,4,7,10,11,12,14,16,17,18};
 
 		// System.out.println(findMax(a));
 		// System.out.println(findMin(a));
@@ -68,12 +68,16 @@ public class Stats {
 		
 	}
 	
-	public static double findQ1(int[]a) {
-		double med= findMedian(a);
-		double min= findMin(a);
-		double difference = med.length - min.length;
-		double quartile = 0.0;
-		quartile = (med + min) / difference;
-		return quartile;	
+	public static double findQ1(int[] a) {
+		double length = a.length+1;
+		double quarter = length/4;
+		int placement = (int)quarter;
+		double number=0.0;
+		if (length % 4 !=0) {
+			number = a[placement];
+		} else {
+			number = (a[placement] + a[placement+1])/2;
+		}
+		return number;
 	}
 }
