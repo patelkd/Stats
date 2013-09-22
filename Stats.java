@@ -17,9 +17,9 @@ public class Stats {
 		// System.out.println(findMax(a));
 		// System.out.println(findMin(a));
 		// System.out.println(findMean(a));
-		System.out.println(findMedian(a));
-		System.out.println(findQ1(a));
-		System.out.println(findQ3(a));
+		// System.out.println(findMedian(a));
+		// System.out.println(findQ1(a));
+		// System.out.println(findQ3(a));
 
 	}
 
@@ -71,27 +71,27 @@ public class Stats {
 	}
 	
 	public static double findQ1(int[] a) {
-		double length = a.length+1;
+		double length = a.length;
 		double quarter = length/4;
 		int placement = (int)quarter;
 		double number=0.0;
-		if (length % 4 ==0) {
+		double sum = a[placement] + a[placement-1];
+		if (length % 4 !=0) {
 			number = a[placement];
 		} else {
-			number = (a[placement] + a[placement-1])/2;
+			number = sum/2;
 		}
 		return number;
 	}
 
 	public static double findQ3(int[] a) {
-		double length = a.length+1;
+		double length = a.length;
 		double quarter = length/4;
 		double multiply = quarter * 3;
 		int placement = (int)multiply;
 		double number=0.0;
 		double sum = a[placement] + a[placement-1];
-
-		if (length % 4 ==0) {
+		if (length % 4 != 0) {
 			number = a[placement];
 		} else {
 			number = sum/2;
