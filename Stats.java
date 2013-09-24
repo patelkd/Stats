@@ -128,7 +128,7 @@ public class Stats {
 			double square = diff * diff;
 			sum += square;
 		}
-		variance = sum/a.length;
+		variance = sum/a.length-1;
 		double sd = Math.sqrt(variance);
 		return sd;
 	}
