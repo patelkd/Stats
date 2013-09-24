@@ -13,13 +13,13 @@ public class Stats {
 
 		int[] a = {9,2,5,4,12,7,8,11,9,3,7,4,12,5,4,10,9,6,9};
 
-		// System.out.println(max(a));
-		// System.out.println(min(a));
-		// System.out.println(mean(a));
-		// System.out.println(median(a));
-		// System.out.println(quartile1(a));
-		// System.out.println(quartile3(a));
-		// System.out.println(mode(a));
+		System.out.println(max(a));
+		System.out.println(min(a));
+		System.out.println(mean(a));
+		System.out.println(median(a));
+		System.out.println(quartile1(a));
+		System.out.println(quartile3(a));
+		System.out.println(mode(a));
 		System.out.println(standardDeviation(a));
 
 	}
