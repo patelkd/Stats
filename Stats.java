@@ -52,8 +52,8 @@ public class Stats {
 		int sum = 0;
 		for (int i=0; i<a.length; i++) {
 			sum =sum + a[i];
-			mean = sum/(a.length);
 		}
+		mean = sum/(a.length);
 		return mean;
 	}
 
